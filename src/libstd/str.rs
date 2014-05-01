@@ -3606,11 +3606,11 @@ mod tests {
 
     #[test]
     fn test_total_ord() {
-        "1234".cmp(& &"123") == Greater;
-        "123".cmp(& &"1234") == Less;
-        "1234".cmp(& &"1234") == Equal;
-        "12345555".cmp(& &"123456") == Less;
-        "22".cmp(& &"1234") == Greater;
+        "1234".cmp(&("123")) == Greater;
+        "123".cmp(&("1234")) == Less;
+        "1234".cmp(&("1234")) == Equal;
+        "12345555".cmp(&("123456")) == Less;
+        "22".cmp(&("1234")) == Greater;
     }
 
     #[test]
@@ -4007,7 +4007,7 @@ mod tests {
 
     #[test]
     fn test_from_str() {
-      let owned: Option<~str> = from_str(&"string");
+      let owned: Option<~str> = from_str("string");
       assert_eq!(owned, Some("string".to_owned()));
     }
 
