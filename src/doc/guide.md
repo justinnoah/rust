@@ -379,7 +379,7 @@ The first thing we'll learn about are 'variable bindings.' They look like this:
 
 ```{rust}
 fn main() {
-    let x = 5i;
+    let x = 5;
 }
 ```
 
